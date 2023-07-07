@@ -10,12 +10,16 @@ public class AimGun : MonoBehaviour
 
     private void Start()
     {
-        Cursor.visible = false;
+        //Cursor.visible = false;
     }
 
     private void Update()
     {
         target = transform.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z));
         crossHair.transform.position = new Vector2(target.x, target.y);
+
+        Vector3 difference = target - player.transform.position;
+        float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        player.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
     }
 }
