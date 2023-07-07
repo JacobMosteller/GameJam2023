@@ -12,13 +12,16 @@ public class AutoMove : MonoBehaviour
     {
         autoRunRb = GetComponent<Rigidbody2D>();
     }
-    void Update()
+    void FixedUpdate()
     {
         AutoRun();
     }
 
     public void AutoRun()
     {
-        autoRunRb.AddForce(Vector2.right * runSpeed * Time.deltaTime, ForceMode2D.Force);
+        Vector2 direction = new Vector2(1, 0);
+        Vector2 velocity = direction.normalized * runSpeed;
+
+        autoRunRb.velocity = velocity;
     }
 }
