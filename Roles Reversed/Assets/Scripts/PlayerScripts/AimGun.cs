@@ -6,6 +6,10 @@ public class AimGun : MonoBehaviour
 {
     public GameObject crossHair;
     public GameObject player;
+    public GameObject bulletPrefab;
+
+    public float bulletSpeed = 60.0f;
+
     private Vector3 target;
 
     private void Start()
@@ -14,6 +18,11 @@ public class AimGun : MonoBehaviour
     }
 
     private void Update()
+    {
+        Aim();
+    }
+
+    private void Aim()
     {
         target = transform.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z));
         crossHair.transform.position = new Vector2(target.x, target.y);
