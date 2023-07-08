@@ -9,6 +9,7 @@ public class AimGun : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject barrel;
 
+
     public float bulletSpeed = 60.0f;
 
     private Vector3 target;
@@ -25,7 +26,7 @@ public class AimGun : MonoBehaviour
 
     private void Aim()
     {
-        target = transform.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z));
+        target = TargetCrossHair();
         crossHair.transform.position = new Vector2(target.x, target.y);
 
         Vector3 difference = target - player.transform.position;
@@ -39,6 +40,12 @@ public class AimGun : MonoBehaviour
             direction.Normalize();
             spawnShot(direction, rotationZ);
         }
+    }
+
+    public Vector3 TargetCrossHair()
+    {
+        target = transform.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z));
+        return target;
     }
 
     private void spawnShot(Vector2 direction, float rotationZ)

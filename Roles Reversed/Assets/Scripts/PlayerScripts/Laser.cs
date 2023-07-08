@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Laser : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    public ParticleSystem explode;
+    private Rigidbody2D rb;
+
+    private void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        
+        if (other.tag == "EnemyBullet")
+        {
+            Destroy(other.gameObject);
+            Destroy(this.gameObject);
+        }
+        else { Destroy(this.gameObject); }
+
     }
 }
