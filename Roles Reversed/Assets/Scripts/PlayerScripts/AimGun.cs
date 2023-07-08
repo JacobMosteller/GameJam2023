@@ -27,7 +27,7 @@ public class AimGun : MonoBehaviour
     private void Aim()
     {
         target = TargetCrossHair();
-        crossHair.transform.position = new Vector2(target.x, target.y);
+        //crossHair.transform.position = new Vector2(target.x, target.y);
 
         Vector3 difference = target - player.transform.position;
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
