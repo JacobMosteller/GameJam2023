@@ -28,7 +28,7 @@ public class EnemyBulletScript : MonoBehaviour
 
        if(timer >10)
        {
-            Destroy(gameObject);
+            Destroy(this.gameObject);
        } 
     }
 
@@ -37,7 +37,11 @@ public class EnemyBulletScript : MonoBehaviour
         if(other.gameObject.CompareTag("Player"))
         {
             //other.gameObject.GetComponent<playerHealth>().health -= 20;
-            Destroy(gameObject);
+            Destroy(this.gameObject);
+        }
+        else if(other.gameObject)
+        {
+            Destroy(this.gameObject);
         }
     }
 }

@@ -15,7 +15,7 @@ public class Laser : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "EnemyBullet")
+        if (other.CompareTag("EnemyBullet"))
         {
             Destroy(other.gameObject);
             Destroy(this.gameObject);
