@@ -329,6 +329,7 @@ GameObject:
   - component: {fileID: 4346332462884130154}
   - component: {fileID: 2209106918332716948}
   - component: {fileID: 306706607959078839}
+  - component: {fileID: 561848353737849243}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -444,3 +445,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   main: {fileID: 0}
+--- !u!114 &561848353737849243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5989229330095586004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2587b4f063f7185468b7638ab98ea799, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gun: {fileID: 487825873759070966}
+  bulletPrefab: {fileID: 3107507479388160601, guid: e7dadd22e8a9b214e8b1df1165ad8a00, type: 3}
+  barrel: {fileID: 615321540942446746}
+  main: {fileID: 0}
+  bulletSpeed: 60

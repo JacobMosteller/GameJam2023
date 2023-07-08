@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class AimGun : MonoBehaviour
 {
-    public GameObject crossHair;
-    public GameObject player;
+    public GameObject gun;
     public GameObject bulletPrefab;
     public GameObject barrel;
+    public Camera main;
 
 
     public float bulletSpeed = 60.0f;
@@ -16,7 +16,11 @@ public class AimGun : MonoBehaviour
 
     private void Start()
     {
-        //Cursor.visible = false;
+        if(Camera.main != null)
+        {
+            main = Camera.main;
+            main.enabled = true;
+        }
     }
 
     private void Update()
@@ -26,12 +30,11 @@ public class AimGun : MonoBehaviour
 
     private void Aim()
     {
-        target = TargetCrossHair();
-        //crossHair.transform.position = new Vector2(target.x, target.y);
+        target = main.GetComponent<CameraPositon>().TargetCrossHair();
 
-        Vector3 difference = target - player.transform.position;
+        Vector3 difference = target - gun.transform.position;
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-        player.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
+        gun.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
 
         if (Input.GetMouseButtonDown(0))
         {
@@ -40,12 +43,6 @@ public class AimGun : MonoBehaviour
             direction.Normalize();
             spawnShot(direction, rotationZ);
         }
-    }
-
-    public Vector3 TargetCrossHair()
-    {
-        target = transform.GetComponent<Camera>().ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, transform.position.z));
-        return target;
     }
 
     private void spawnShot(Vector2 direction, float rotationZ)

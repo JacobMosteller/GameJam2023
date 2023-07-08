@@ -18,7 +18,7 @@ public class CrossHair : MonoBehaviour
 
     public void AimCrosshair()
     {
-        Vector3 target = main.GetComponent<AimGun>().TargetCrossHair();
+        Vector3 target = main.GetComponent<CameraPositon>().TargetCrossHair();
         this.transform.position = new Vector2(target.x, target.y);
     }
 }

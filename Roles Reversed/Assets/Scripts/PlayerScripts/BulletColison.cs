@@ -28,6 +28,6 @@ public class BulletColison : MonoBehaviour
     public void UnArm()
     {
         GetComponent<BulletMovement>().enabled = false;
-        main.GetComponent<AimGun>().enabled = false;
+        GetComponent<AimGun>().enabled = false;
     }
 }
