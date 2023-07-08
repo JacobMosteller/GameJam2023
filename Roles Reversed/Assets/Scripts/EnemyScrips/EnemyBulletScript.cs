@@ -34,16 +34,21 @@ public class EnemyBulletScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        
 
-        if(other.gameObject.CompareTag("Player"))
+
+        if (other.gameObject.CompareTag("Player"))
         {
             //other.gameObject.GetComponent<playerHealth>().health -= 20;
             Destroy(this.gameObject);
         }
-        else if(other.gameObject)
+        else if (other.gameObject.CompareTag("ground"))
         {
             Destroy(this.gameObject);
+        }
+        else if(other.gameObject.CompareTag("bullet"))
+        {
+            Destroy(this.gameObject);
+            Destroy(other.gameObject);
         }
     }
 }

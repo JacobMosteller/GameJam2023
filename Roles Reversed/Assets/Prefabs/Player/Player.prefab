@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874561846388141746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.92, y: -0.18, z: 0}
+  m_LocalPosition: {x: 3.64, y: 0.44, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -86,14 +86,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3165054385566779302}
-  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 4.68, y: -0.22, z: 0}
+  m_LocalRotation: {x: -0.03162506, y: 0.0049113245, z: -0.15338123, w: 0.9876487}
+  m_LocalPosition: {x: -0.64, y: -2.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3204014274982613751}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+  m_LocalEulerAnglesHint: {x: -3.495, y: 1.114, z: -17.689}
 --- !u!212 &8818910952579269268
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -135,7 +135,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bd92d0533be031e489418e90d10c9704, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -183,7 +183,7 @@ Transform:
   - {fileID: 2300376463427467213}
   - {fileID: 3204014274982613751}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &1798245181221454961
 CapsuleCollider2D:
@@ -275,8 +275,7 @@ MonoBehaviour:
   gun: {fileID: 8110125919539705424}
   bulletPrefab: {fileID: 5989229330095586004, guid: 4f1d5cf39eb88af4893228b7a2489acc, type: 3}
   barrel: {fileID: 1874561846388141746}
-  main: {fileID: 0}
-  ammo: 12
+  ammo: 6
   mouseNum: 1
   bulletSpeed: 0
 --- !u!95 &3934478000519393621
@@ -341,7 +340,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2f443f39498bdbc47ac5e29f4086f466, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c646aa5fa5aa98540a18f7197a2e931d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -376,8 +375,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8110125919539705424}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.272, y: 0.032, z: 0.011125}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: -0.3, y: 2.35, z: 0}
+  m_LocalScale: {x: 0.9773, y: 0.9773, z: 0.9773}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 265293975500248055}
