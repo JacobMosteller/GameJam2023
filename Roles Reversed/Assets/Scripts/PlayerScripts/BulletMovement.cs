@@ -8,7 +8,6 @@ public class BulletMovement : MonoBehaviour
     Rigidbody2D bulletRigidbody;
     public float rotate;
     public float bulletSpeed;
-    private bool hasTouched = false;
 
     [SerializeField]
     private InputActionReference pointerPosition;
@@ -36,15 +35,11 @@ public class BulletMovement : MonoBehaviour
     }
     void ApplyRotationLeft()
     {
-        bulletRigidbody.freezeRotation = true;
-        transform.Rotate(Vector3.forward * rotate * Time.deltaTime);
-        bulletRigidbody.freezeRotation = false;
+        transform.Rotate(0, 0, rotate);
     }
     void ApplyRotationRight()
     {
-        bulletRigidbody.freezeRotation = true;
-        transform.Rotate(Vector3.forward * -rotate * Time.deltaTime);
-        bulletRigidbody.freezeRotation = false;
+        transform.Rotate(0, 0, -rotate);
     }
     void ProcessRotationLeft()
     {
@@ -64,9 +59,8 @@ public class BulletMovement : MonoBehaviour
     }
 
     private void Fly()
-    {   
-        if(!hasTouched)
-        bulletRigidbody.AddRelativeForce(Vector2.right * bulletSpeed);
+    {
+        transform.Translate(0.01f * bulletSpeed, 0, 0);
     }
 
     private Vector2 GetPointerInput()
