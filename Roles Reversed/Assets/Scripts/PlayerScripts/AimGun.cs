@@ -7,7 +7,7 @@ public class AimGun : MonoBehaviour
     public GameObject gun;
     public GameObject bulletPrefab;
     public GameObject barrel;
-    public Camera main;
+    private Camera main;
     public int ammo;
 
     public int mouseNum = 0;

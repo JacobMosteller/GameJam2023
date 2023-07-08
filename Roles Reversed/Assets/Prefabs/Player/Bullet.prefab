@@ -354,7 +354,7 @@ GameObject:
   - component: {fileID: 561848353737849243}
   m_Layer: 0
   m_Name: Bullet
-  m_TagString: Untagged
+  m_TagString: bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -482,7 +482,6 @@ MonoBehaviour:
   gun: {fileID: 487825873759070966}
   bulletPrefab: {fileID: 3107507479388160601, guid: e7dadd22e8a9b214e8b1df1165ad8a00, type: 3}
   barrel: {fileID: 615321540942446746}
-  main: {fileID: 0}
   ammo: 6
   mouseNum: 0
   bulletSpeed: 60
