@@ -376,5 +376,6 @@ MonoBehaviour:
   bulletPrefab: {fileID: 3107507479388160601, guid: e7dadd22e8a9b214e8b1df1165ad8a00, type: 3}
   barrel: {fileID: 615321540942446746}
   main: {fileID: 0}
+  ammo: 6
   mouseNum: 0
   bulletSpeed: 60

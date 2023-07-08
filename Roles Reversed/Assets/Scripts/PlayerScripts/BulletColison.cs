@@ -18,15 +18,23 @@ public class BulletColison : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "ground")
+        if (collision.gameObject.tag == "ground" || collision.gameObject.tag == "EnemyBullet" || collision.gameObject.tag == "Enemy")
         {
-            UnArm();
+            UnArm(collision);
             GetComponent<Rigidbody2D>().gravityScale = 5;
         }
     }
 
-    public void UnArm()
+    public void UnArm(Collision2D collison)
     {
-        Destroy(this.gameObject);
+        if (collison.gameObject.tag == "ground")
+        {
+            Destroy(this.gameObject);
+        }
+        else 
+        {
+            Destroy(collison.gameObject);
+            Destroy(this.gameObject);
+        }
     }
 }

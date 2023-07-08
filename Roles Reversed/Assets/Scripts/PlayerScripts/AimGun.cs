@@ -8,6 +8,7 @@ public class AimGun : MonoBehaviour
     public GameObject bulletPrefab;
     public GameObject barrel;
     public Camera main;
+    public int ammo;
 
     public int mouseNum = 0;
 
@@ -38,12 +39,13 @@ public class AimGun : MonoBehaviour
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         gun.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
 
-        if (Input.GetMouseButtonDown(mouseNum))
+        if (Input.GetMouseButtonDown(mouseNum) && ammo > 0)
         {
             float distance = difference.magnitude;
             Vector2 direction = difference / distance;
             direction.Normalize();
             spawnShot(direction, rotationZ);
+            ammo--;
         }
     }
 
