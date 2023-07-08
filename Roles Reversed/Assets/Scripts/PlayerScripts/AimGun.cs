@@ -30,7 +30,10 @@ public class AimGun : MonoBehaviour
 
     private void Update()
     {
-        Aim();
+        if (!PauseMenu.isPaused)
+        {
+            Aim();
+        }
     }
 
     private void Aim()
