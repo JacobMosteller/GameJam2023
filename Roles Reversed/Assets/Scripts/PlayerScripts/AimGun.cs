@@ -24,6 +24,8 @@ public class AimGun : MonoBehaviour
             main = Camera.main;
             main.enabled = true;
         }
+
+        //main.GetComponentInChildren<Cinemachine.CinemachineVirtualCamera>().Follow = bulletPrefab;
     }
 
     private void Update()
