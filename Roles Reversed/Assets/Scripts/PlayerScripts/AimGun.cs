@@ -9,6 +9,8 @@ public class AimGun : MonoBehaviour
     public GameObject barrel;
     public Camera main;
 
+    public int mouseNum = 0;
+
 
     public float bulletSpeed = 60.0f;
 
@@ -36,7 +38,7 @@ public class AimGun : MonoBehaviour
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         gun.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(mouseNum))
         {
             float distance = difference.magnitude;
             Vector2 direction = difference / distance;
