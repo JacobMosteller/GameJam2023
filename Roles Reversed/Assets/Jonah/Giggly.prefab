@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1283526183455450051}
   - component: {fileID: 5506288361619467382}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: Giggly Arms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 3501857643266862417}
   - component: {fileID: 1763574398665216670}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Giggly BG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -198,10 +198,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3501857643266862417}
   - {fileID: 1283526183455450051}
+  - {fileID: 3501857643266862417}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &5876676611808812585
 Animator:
