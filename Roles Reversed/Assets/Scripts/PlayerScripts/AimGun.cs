@@ -7,6 +7,7 @@ public class AimGun : MonoBehaviour
     public GameObject crossHair;
     public GameObject player;
     public GameObject bulletPrefab;
+    public GameObject barrel;
 
     public float bulletSpeed = 60.0f;
 
@@ -43,7 +44,7 @@ public class AimGun : MonoBehaviour
     private void spawnShot(Vector2 direction, float rotationZ)
     {
         GameObject b = Instantiate(bulletPrefab) as GameObject;
-        b.transform.position = player.transform.position;
+        b.transform.position = barrel.transform.position;
         b.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
         b.GetComponent<Rigidbody2D>().velocity = direction * bulletSpeed;
     }

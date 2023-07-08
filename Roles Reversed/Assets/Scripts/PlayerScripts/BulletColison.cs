@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BulletColison : MonoBehaviour
 {
+    public Camera main;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,8 +20,14 @@ public class BulletColison : MonoBehaviour
     {
         if (collision.gameObject.tag == "ground")
         {
-            GetComponent<BulletMovement>().enabled = false;
+            UnArm();
             GetComponent<Rigidbody2D>().gravityScale = 5;
         }
+    }
+
+    public void UnArm()
+    {
+        GetComponent<BulletMovement>().enabled = false;
+        main.GetComponent<AimGun>().enabled = false;
     }
 }
