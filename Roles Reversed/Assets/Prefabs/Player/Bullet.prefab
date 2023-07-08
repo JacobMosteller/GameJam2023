@@ -344,8 +344,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4efaa49dab8f014793460cabce0ef6e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotate: 1
-  bulletSpeed: 10
+  rotate: 0.75
+  bulletSpeed: 7
   pointerPosition: {fileID: 6638019014893270345, guid: adaaed17880dcfd409f568bc8051cb33, type: 3}
 --- !u!114 &306706607959078839
 MonoBehaviour:
