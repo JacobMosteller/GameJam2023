@@ -431,11 +431,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotate: 100
   bulletSpeed: 5
-<<<<<<< Updated upstream
   pointerPosition: {fileID: 6638019014893270345, guid: adaaed17880dcfd409f568bc8051cb33, type: 3}
-=======
-  pointerPosition: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!114 &306706607959078839
 MonoBehaviour:
   m_ObjectHideFlags: 0
