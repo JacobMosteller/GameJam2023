@@ -16,6 +16,7 @@ public class AutoSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        bulletIsDead = true;
         ammo = GetComponentInParent<AimGun>().ammo;
         if (Camera.main != null)
         {

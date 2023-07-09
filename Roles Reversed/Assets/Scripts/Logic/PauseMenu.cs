@@ -7,6 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenu;
     public static bool isPaused = false;
+    public AutoSpawn bulletIsAlive;
     
 
     // Update is called once per frame
@@ -47,6 +48,7 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene("Menu");
         Time.timeScale = 1f;
         isPaused = false;
+
     }
 
     public bool IsPaused()

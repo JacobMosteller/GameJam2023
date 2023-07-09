@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Exit : MonoBehaviour
 {
-    public float loadLevelDelay = 2f;
+    public float loadLevelDelay = .1f;
+    public WinScreen win;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -19,7 +20,6 @@ public class Exit : MonoBehaviour
     IEnumerator LoadNextLevel()
     {
         yield return new WaitForSecondsRealtime(loadLevelDelay);
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex + 1);
+        win.LoadScreenScene();
     }
 }

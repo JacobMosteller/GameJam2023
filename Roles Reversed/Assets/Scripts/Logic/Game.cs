@@ -5,7 +5,7 @@ using TMPro;
 
 public class Game : MonoBehaviour
 {
-    public static int ammo = 6;
+    public static int ammo = 10;
     public TextMeshProUGUI lives;
     public TextMeshProUGUI score;
     // Start is called before the first frame update

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Laser : MonoBehaviour
 {
 
-    public ParticleSystem explode;
+    public GameObject explode;
 
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -15,6 +15,7 @@ public class Laser : MonoBehaviour
         {
             Destroy(other.gameObject);
             Destroy(gameObject);
+            Instantiate(explode, other.transform.position, other.transform.rotation);
         }
         else if(other.CompareTag("Enemy"))
         {

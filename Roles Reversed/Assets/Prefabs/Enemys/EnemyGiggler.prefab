@@ -38,7 +38,7 @@ Transform:
   - {fileID: 1289493522441623369}
   - {fileID: 7599415930361937223}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4572171191885595118
 SpriteRenderer:
@@ -106,6 +106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bullet: {fileID: 5080009868068922499, guid: 024a12c76fc304443816fd235e737310, type: 3}
   bulletPos: {fileID: 1897907478892684363}
+  bulletSpawn: 2.3
 --- !u!114 &2373060133764833455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  exolode: {fileID: 4368882852540245473, guid: 35692b6d8ac5d9049baa73168f4b40f1, type: 3}
 --- !u!70 &3691238401690729697
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

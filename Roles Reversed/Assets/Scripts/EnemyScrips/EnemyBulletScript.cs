@@ -38,7 +38,7 @@ public class EnemyBulletScript : MonoBehaviour
 
         if (other.gameObject.CompareTag("Player"))
         {
-            aM.TakeAHit(10);
+            aM.TakeAHit(25);
             Destroy(this.gameObject);
         }
         else if (other.gameObject.CompareTag("ground"))

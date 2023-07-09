@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 114336877020458703}
   - component: {fileID: 5660114976207802273}
+  - component: {fileID: 1594180121404647081}
   - component: {fileID: 5577732061393227874}
-  - component: {fileID: 6644668745347360495}
   - component: {fileID: 4870402428144086632}
   m_Layer: 0
   m_Name: laserShot
@@ -87,6 +87,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1594180121404647081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3107507479388160601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e9a69fd04001fe4daf11db0c3bc4b28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explode: {fileID: 483141514927518901, guid: a452d951dc1ed2148ae52a5b966c30aa, type: 3}
 --- !u!50 &5577732061393227874
 Rigidbody2D:
   serializedVersion: 4
@@ -114,19 +127,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &6644668745347360495
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3107507479388160601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e9a69fd04001fe4daf11db0c3bc4b28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  explode: {fileID: 0}
 --- !u!58 &4870402428144086632
 CircleCollider2D:
   m_ObjectHideFlags: 0

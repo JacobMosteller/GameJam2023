@@ -9,6 +9,11 @@ public class CrossHair : MonoBehaviour
     // Update is called once per frame
     private void Start()
     {
+        if (Camera.main != null)
+        {
+            main = Camera.main;
+            main.enabled = true;
+        }
         Cursor.visible = false;
     }
     void Update()

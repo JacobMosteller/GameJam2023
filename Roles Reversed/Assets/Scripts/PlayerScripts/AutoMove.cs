@@ -24,7 +24,7 @@ public class AutoMove : MonoBehaviour
     }
     private void Update()
     {
-        Die();
+        TakeAHit(0);
     }
 
     public void AutoRun()

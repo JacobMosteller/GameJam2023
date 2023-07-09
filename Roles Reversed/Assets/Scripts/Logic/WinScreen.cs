@@ -15,11 +15,15 @@ public class WinScreen : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene(0);
+        AutoSpawn.bulletIsDead = true;
 
     }
    
 
-
+    public void LoadScreenScene()
+    {
+        winScreen.SetActive(true);
+    }
     
 
 
