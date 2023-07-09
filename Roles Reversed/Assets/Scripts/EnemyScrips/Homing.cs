@@ -13,7 +13,6 @@ public class Homing : MonoBehaviour
 
     // Start is called before the first frame update
     void Start() {
-        target = GameObject.FindGameObjectWithTag("Player").transform;
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -26,6 +25,7 @@ public class Homing : MonoBehaviour
         rb.angularVelocity = -rotateAmount * rotateSpeed;
 
         rb.velocity = transform.up * speed;
+        target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     void OnTriggerEnter2D ()
