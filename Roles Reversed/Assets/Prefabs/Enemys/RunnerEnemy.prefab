@@ -33,7 +33,7 @@ Transform:
   m_Children:
   - {fileID: 2895818716526704588}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &5021416912491295287
 CapsuleCollider2D:
@@ -205,7 +205,7 @@ SpriteRenderer:
   m_SortingLayerID: -1469620037
   m_SortingLayer: 2
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: eaef852f95821734f848e97ca35d57f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a5f5ee1e1fb3ad9408a41e602f0614c2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
