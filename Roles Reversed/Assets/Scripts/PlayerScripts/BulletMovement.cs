@@ -62,11 +62,4 @@ public class BulletMovement : MonoBehaviour
     {
         transform.Translate(0.01f * bulletSpeed, 0, 0);
     }
-
-    private Vector2 GetPointerInput()
-    {
-        Vector3 mousePos = pointerPosition.action.ReadValue<Vector2>();
-        mousePos.z = Camera.main.nearClipPlane;
-        return Camera.main.ScreenToWorldPoint(mousePos);
-    }
 }

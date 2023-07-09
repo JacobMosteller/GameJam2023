@@ -20,6 +20,10 @@ public class Laser : MonoBehaviour
             Destroy(other.gameObject);
             Destroy(this.gameObject);
         }
+        else if(other.CompareTag("Enemy"))
+        {
+            EnemyHealth.TakeHit(34);
+        }
         else { Destroy(this.gameObject); }
 
     }
