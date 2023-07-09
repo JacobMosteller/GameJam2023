@@ -34,11 +34,11 @@ public class EnemyBulletScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-
+        AutoMove aM = other.GetComponent<AutoMove>();
 
         if (other.gameObject.CompareTag("Player"))
         {
-            //other.gameObject.GetComponent<playerHealth>().health -= 20;
+            aM.TakeAHit(10);
             Destroy(this.gameObject);
         }
         else if (other.gameObject.CompareTag("ground"))
