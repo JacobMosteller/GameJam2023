@@ -8,6 +8,7 @@ public class AutoMove : MonoBehaviour
     private Rigidbody2D autoRunRb;
     public float runSpeed = 5f;
 
+
     private void Awake()
     {
         autoRunRb = GetComponent<Rigidbody2D>();
