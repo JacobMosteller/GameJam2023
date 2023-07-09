@@ -2,50 +2,58 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AutoSpawn : MonoBehaviour
+public class AimMiniGun : MonoBehaviour
 {
     public GameObject gun;
     public GameObject bulletPrefab;
     public GameObject barrel;
-    public float bulletSpeed = 0f;
     private Camera main;
-    private int ammo;
-    private Vector3 target;
-    public static bool bulletIsDead = true;
+    public int ammo;
 
-    // Start is called before the first frame update
-    void Start()
+    public int mouseNum = 0;
+
+
+    public float bulletSpeed = 60.0f;
+
+    private Vector3 target;
+
+    private void Start()
     {
-        ammo = GetComponentInParent<AimGun>().ammo;
         if (Camera.main != null)
         {
             main = Camera.main;
             main.enabled = true;
         }
+
+        //main.GetComponentInChildren<Cinemachine.CinemachineVirtualCamera>().Follow = bulletPrefab;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        BulletSpawn();
+        if (!PauseMenu.isPaused)
+        {
+            Aim();
+        }
     }
-    public void BulletSpawn()
+
+    private void Aim()
     {
         target = main.GetComponent<CameraPositon>().TargetCrossHair();
 
         Vector3 difference = target - gun.transform.position;
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        gun.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
 
-        if (bulletIsDead && ammo > 0)
+        if (Input.GetMouseButtonDown(mouseNum) && ammo > 0)
         {
             float distance = difference.magnitude;
             Vector2 direction = difference / distance;
             direction.Normalize();
             spawnShot(direction, rotationZ);
             ammo--;
-            bulletIsDead = false;
         }
     }
+
     private void spawnShot(Vector2 direction, float rotationZ)
     {
         GameObject b = Instantiate(bulletPrefab) as GameObject;

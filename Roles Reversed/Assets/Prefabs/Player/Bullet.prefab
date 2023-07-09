@@ -351,7 +351,7 @@ GameObject:
   - component: {fileID: 4346332462884130154}
   - component: {fileID: 2209106918332716948}
   - component: {fileID: 306706607959078839}
-  - component: {fileID: 561848353737849243}
+  - component: {fileID: 54045925088853084}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: bullet
@@ -452,7 +452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotate: 0.75
-  bulletSpeed: 7
+  bulletSpeed: 3
   pointerPosition: {fileID: 6638019014893270345, guid: adaaed17880dcfd409f568bc8051cb33, type: 3}
 --- !u!114 &306706607959078839
 MonoBehaviour:
@@ -467,7 +467,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 483141514927518901, guid: a452d951dc1ed2148ae52a5b966c30aa, type: 3}
---- !u!114 &561848353737849243
+--- !u!114 &54045925088853084
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -476,7 +476,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5989229330095586004}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2587b4f063f7185468b7638ab98ea799, type: 3}
+  m_Script: {fileID: 11500000, guid: 48af9646b1c3ef14194f889663999aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   gun: {fileID: 487825873759070966}
