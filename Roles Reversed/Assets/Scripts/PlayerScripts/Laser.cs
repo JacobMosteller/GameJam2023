@@ -18,7 +18,7 @@ public class Laser : MonoBehaviour
         }
         else if(other.CompareTag("Enemy"))
         {
-            eH.TakeHit(10);
+            eH.TakeHit(17);
             Destroy(gameObject);
         }
         else { Destroy(gameObject); }
