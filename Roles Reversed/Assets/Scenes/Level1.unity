@@ -29920,6 +29920,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4669267337802676174, guid: ef2e8753cb7cb634398195ae9dfbc407, type: 3}
+      propertyPath: runSpeed
+      value: 1.7
+      objectReference: {fileID: 0}
     - target: {fileID: 6355350373208498263, guid: ef2e8753cb7cb634398195ae9dfbc407, type: 3}
       propertyPath: m_Name
       value: RunnerEnemy
