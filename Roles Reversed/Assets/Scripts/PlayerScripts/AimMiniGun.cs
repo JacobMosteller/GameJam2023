@@ -9,6 +9,8 @@ public class AimMiniGun : MonoBehaviour
     public GameObject barrel;
     private Camera main;
     public int ammo;
+    public float fireRate;
+    float nextFire;
 
     public int mouseNum = 0;
 
@@ -44,8 +46,9 @@ public class AimMiniGun : MonoBehaviour
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         gun.transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
 
-        if (Input.GetMouseButtonDown(mouseNum) && ammo > 0)
+        if (Input.GetMouseButtonDown(mouseNum) && ammo > 0 && Time.time > nextFire)
         {
+            nextFire = Time.time + fireRate;
             float distance = difference.magnitude;
             Vector2 direction = difference / distance;
             direction.Normalize();
