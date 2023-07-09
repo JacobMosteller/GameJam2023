@@ -31,14 +31,19 @@ public class AutoMove : MonoBehaviour
 
         autoRunRb.velocity = velocity;
     }
-
-    public void Die()
+    public void TakeAHit(float damage)
     {
+        health -= damage;
         if(health <= 0f)
         {
             Instantiate(explosion, transform.position, transform.rotation);
             Destroy(gameObject);
         }
+    }
+
+    public void Die()
+    {
+        
         
     }
 
