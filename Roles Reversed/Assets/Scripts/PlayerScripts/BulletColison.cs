@@ -11,6 +11,7 @@ public class BulletColison : MonoBehaviour
         if (collision.gameObject.CompareTag("ground") || collision.gameObject.CompareTag("EnemyBullet") || collision.gameObject.CompareTag("Enemy"))
         {
             UnArm(collision);
+            Game.ammo--;
             AutoSpawn.bulletIsDead = true;
         }
     }
