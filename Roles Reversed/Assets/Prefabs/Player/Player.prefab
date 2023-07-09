@@ -260,6 +260,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73db7c2e90ccd174580834ae67d5b3ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  health: 100
+  explosion: {fileID: 4368882852540245473, guid: 35692b6d8ac5d9049baa73168f4b40f1, type: 3}
   runSpeed: 1
 --- !u!114 &3064035730815701275
 MonoBehaviour:
