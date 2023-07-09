@@ -11,12 +11,13 @@ public class Game : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lives.text = ammo.ToString();
+        //lives.text = ammo.ToString();
     }
     private void Update()
     {
 
         ammo = GetComponent<AimGun>().ammo;
+        lives.text = ammo.ToString();
     }
 
 }
