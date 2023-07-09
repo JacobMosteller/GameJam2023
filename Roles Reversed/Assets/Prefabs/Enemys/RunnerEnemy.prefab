@@ -33,7 +33,7 @@ Transform:
   m_Children:
   - {fileID: 2895818716526704588}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &5021416912491295287
 CapsuleCollider2D:
@@ -109,7 +109,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e2c39a3a3b8f2f41af7e6c3943af274, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 2
+  runSpeed: 1.7
 --- !u!1 &7836406555174114055
 GameObject:
   m_ObjectHideFlags: 0

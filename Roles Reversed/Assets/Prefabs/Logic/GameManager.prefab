@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 238122604701829779}
   - component: {fileID: 3917400922709505368}
+  - component: {fileID: 7269547896048294043}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -45,6 +46,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 0}
-  playerBullet: {fileID: 5989229330095586004, guid: 4f1d5cf39eb88af4893228b7a2489acc, type: 3}
-  playerWick: {fileID: 6638560905705139163, guid: 75e62d458a1bed3449e4a51bab10b4d0, type: 3}
-  isPaused: 0
+--- !u!114 &7269547896048294043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3788803977036338637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6873dd96fdbd2ef4c9cefbf27ef74a2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lives: {fileID: 0}
+  score: {fileID: 0}
