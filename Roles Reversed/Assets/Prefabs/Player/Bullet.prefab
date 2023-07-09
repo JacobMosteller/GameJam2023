@@ -484,4 +484,4 @@ MonoBehaviour:
   barrel: {fileID: 615321540942446746}
   ammo: 1000
   mouseNum: 0
-  bulletSpeed: 60
+  bulletSpeed: 30

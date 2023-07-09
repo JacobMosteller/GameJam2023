@@ -15,6 +15,7 @@ public class Laser : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        EnemyHealth eH = other.GetComponent<EnemyHealth>();
         if (other.CompareTag("EnemyBullet"))
         {
             Destroy(other.gameObject);
@@ -22,7 +23,8 @@ public class Laser : MonoBehaviour
         }
         else if(other.CompareTag("Enemy"))
         {
-            EnemyHealth.TakeHit(34);
+            eH.TakeHit(34);
+            Destroy(gameObject);
         }
         else { Destroy(this.gameObject); }
 
