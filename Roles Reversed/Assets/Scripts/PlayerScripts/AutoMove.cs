@@ -13,6 +13,7 @@ public class AutoMove : MonoBehaviour
     private void Awake()
     {
         autoRunRb = GetComponent<Rigidbody2D>();
+
     }
     void FixedUpdate()
     {
@@ -36,6 +37,7 @@ public class AutoMove : MonoBehaviour
         health -= damage;
         if(health <= 0f)
         {
+            DeathScree.UDed();
             Instantiate(explosion, transform.position, transform.rotation);
             Destroy(gameObject);
         }
