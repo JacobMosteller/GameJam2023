@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class DeathScree : MonoBehaviour
 {
-    public static GameObject deathScree;
+    public GameObject deathScree;
 
-    public static void UDed()
+    public void UDed()
     {
         deathScree.SetActive(true);
+    }
+
+    public static void DoTheRoar()
+    {
     }
 }

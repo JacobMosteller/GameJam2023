@@ -37,7 +37,6 @@ public class AutoMove : MonoBehaviour
         health -= damage;
         if(health <= 0f)
         {
-            DeathScree.UDed();
             Instantiate(explosion, transform.position, transform.rotation);
             Destroy(gameObject);
         }
