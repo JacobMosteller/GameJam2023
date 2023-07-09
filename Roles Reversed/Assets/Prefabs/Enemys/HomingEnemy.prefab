@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1506005153712284323, guid: 4f1d5cf39eb88af4893228b7a2489acc, type: 3}
-  speed: 2
+  speed: 1.5
   rotateSpeed: 250
 --- !u!95 &1295893620355686927
 Animator:
