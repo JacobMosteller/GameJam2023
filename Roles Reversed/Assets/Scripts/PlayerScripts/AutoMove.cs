@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Cinemachine;
 
 public class AutoMove : MonoBehaviour
@@ -9,6 +10,7 @@ public class AutoMove : MonoBehaviour
     public GameObject explosion;
     private Rigidbody2D autoRunRb;
     public float runSpeed = 5f;
+    public DeathScree uded;
 
     private void Awake()
     {
@@ -37,6 +39,7 @@ public class AutoMove : MonoBehaviour
         health -= damage;
         if(health <= 0f)
         {
+            uded.UDed();
             Instantiate(explosion, transform.position, transform.rotation);
             Destroy(gameObject);
         }

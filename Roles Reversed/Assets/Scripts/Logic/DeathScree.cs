@@ -11,7 +11,4 @@ public class DeathScree : MonoBehaviour
         deathScree.SetActive(true);
     }
 
-    public static void DoTheRoar()
-    {
-    }
 }
