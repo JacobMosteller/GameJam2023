@@ -5,11 +5,13 @@ using Cinemachine;
 
 public class BulletColison : MonoBehaviour
 {
+    public GameObject explosion;
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("ground") || collision.gameObject.CompareTag("EnemyBullet") || collision.gameObject.CompareTag("Enemy"))
         {
             UnArm(collision);
+            AutoSpawn.bulletIsDead = true;
         }
     }
 
@@ -23,8 +25,9 @@ public class BulletColison : MonoBehaviour
         {
             Destroy(collison.gameObject);
             Destroy(this.gameObject);
-            AutoSpawn.bulletIsDead = true;
         }
+
+        Instantiate(explosion, transform.position, transform.rotation);
     }
 
 }

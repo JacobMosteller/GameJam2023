@@ -184,7 +184,7 @@ Transform:
   - {fileID: 2300376463427467213}
   - {fileID: 3204014274982613751}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &1798245181221454961
 CapsuleCollider2D:
@@ -261,8 +261,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 1
-  wickCam: {fileID: 0}
-  bulletCam: {fileID: 0}
 --- !u!114 &3064035730815701275
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,7 +293,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5989229330095586004, guid: 4f1d5cf39eb88af4893228b7a2489acc, type: 3}
   barrel: {fileID: 1874561846388141746}
   ammo: 6
-  mouseNum: 7
+  mouseNum: 4
   bulletSpeed: 0
 --- !u!95 &3934478000519393621
 Animator:

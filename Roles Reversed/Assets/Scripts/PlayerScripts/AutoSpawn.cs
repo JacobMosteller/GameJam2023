@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Cinemachine;
 
 public class AutoSpawn : MonoBehaviour
 {
@@ -13,18 +12,6 @@ public class AutoSpawn : MonoBehaviour
     private int ammo;
     private Vector3 target;
     public static bool bulletIsDead = true;
-    public CinemachineVirtualCamera bulletCam;
-
-    private void OnEnable()
-    {
-        CameraSwitcher.Register(bulletCam);
-        CameraSwitcher.SwitchCamera(bulletCam);
-    }
-
-    private void OnDisable()
-    {
-        CameraSwitcher.UnRegister(bulletCam);
-    }
 
     // Start is called before the first frame update
     void Start()
