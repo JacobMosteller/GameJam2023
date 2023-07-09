@@ -6,7 +6,7 @@ using Cinemachine;
 public static class CameraSwitcher
 {
 
-    static List<CinemachineVirtualCamera> cameras = new List<CinemachineVirtualCamera>();
+    static List<CinemachineVirtualCamera> cameras = new();
 
     public static CinemachineVirtualCamera ActiveCamera = null;
 

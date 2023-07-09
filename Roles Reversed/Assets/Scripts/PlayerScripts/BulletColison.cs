@@ -23,6 +23,7 @@ public class BulletColison : MonoBehaviour
         {
             Destroy(collison.gameObject);
             Destroy(this.gameObject);
+            AutoSpawn.bulletIsDead = true;
         }
     }
 

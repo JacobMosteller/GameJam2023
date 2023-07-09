@@ -132,8 +132,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1469620037
+  m_SortingLayer: 2
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: bd92d0533be031e489418e90d10c9704, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -158,6 +158,7 @@ GameObject:
   - component: {fileID: 1798245181221454961}
   - component: {fileID: 5284352818198468342}
   - component: {fileID: 4787801038884883106}
+  - component: {fileID: 3064035730815701275}
   - component: {fileID: 4842779930434338911}
   - component: {fileID: 3934478000519393621}
   - component: {fileID: 1385827478835080161}
@@ -183,7 +184,7 @@ Transform:
   - {fileID: 2300376463427467213}
   - {fileID: 3204014274982613751}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &1798245181221454961
 CapsuleCollider2D:
@@ -260,6 +261,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 1
+  wickCam: {fileID: 0}
+  bulletCam: {fileID: 0}
+--- !u!114 &3064035730815701275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6638560905705139163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 539f9d013773dcc40ae109de381d86d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gun: {fileID: 8110125919539705424}
+  bulletPrefab: {fileID: 5989229330095586004, guid: 4f1d5cf39eb88af4893228b7a2489acc, type: 3}
+  barrel: {fileID: 1874561846388141746}
+  bulletSpeed: 0
 --- !u!114 &4842779930434338911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,7 +295,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 5989229330095586004, guid: 4f1d5cf39eb88af4893228b7a2489acc, type: 3}
   barrel: {fileID: 1874561846388141746}
   ammo: 6
-  mouseNum: 1
+  mouseNum: 7
   bulletSpeed: 0
 --- !u!95 &3934478000519393621
 Animator:
@@ -337,8 +356,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1755864389
-  m_SortingLayer: 1
+  m_SortingLayerID: 610462327
+  m_SortingLayer: 3
   m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: c646aa5fa5aa98540a18f7197a2e931d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
