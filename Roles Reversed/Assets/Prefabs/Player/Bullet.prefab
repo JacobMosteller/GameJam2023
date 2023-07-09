@@ -466,7 +466,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3cc745a23b47940b69ad8fa0604e2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  main: {fileID: 0}
 --- !u!114 &561848353737849243
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,6 +481,6 @@ MonoBehaviour:
   gun: {fileID: 487825873759070966}
   bulletPrefab: {fileID: 3107507479388160601, guid: e7dadd22e8a9b214e8b1df1165ad8a00, type: 3}
   barrel: {fileID: 615321540942446746}
-  ammo: 6
+  ammo: 1000
   mouseNum: 0
   bulletSpeed: 60
